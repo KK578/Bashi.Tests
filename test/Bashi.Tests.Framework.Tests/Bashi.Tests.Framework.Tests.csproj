@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\Bashi.Tests.Framework\Bashi.Tests.Framework.csproj" />
+    <ProjectReference Include="..\..\src\Bashi.Tests.Framework\Bashi.Tests.Framework.csproj" />
   </ItemGroup>
 
 </Project>

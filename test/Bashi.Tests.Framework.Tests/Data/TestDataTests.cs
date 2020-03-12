@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Bashi.Tests.Framework.Data;
+using Bashi.Tests.Framework.Tests.TestObjects;
 using NUnit.Framework;
 
 namespace Bashi.Tests.Framework.Tests.Data
@@ -41,6 +42,13 @@ namespace Bashi.Tests.Framework.Tests.Data
         public void WellKnownString_WhenRepeatedlyCalled_WillReturnTheSameValue()
         {
             Assert.That(Generate(() => TestData.WellKnownString), Has.Count.EqualTo(1));
+        }
+
+        [Test]
+        public void Create_GivenAssortedTypes_ReturnsAValidValue()
+        {
+            Assert.That(TestData.Create<Uri>().ToString(), Contains.Substring("http://"));
+            Assert.That(TestData.Create<TestObject>().Numbers, Is.Not.Null.Or.Empty);
         }
     }
 }

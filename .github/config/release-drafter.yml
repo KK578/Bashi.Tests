@@ -1,4 +1,4 @@
-name-template: "Bashi.Core $NEXT_PATCH_VERSION"
+name-template: "Bashi.Tests $NEXT_PATCH_VERSION"
 tag-template: "$NEXT_PATCH_VERSION"
 categories:
   - title: "🚀Features"

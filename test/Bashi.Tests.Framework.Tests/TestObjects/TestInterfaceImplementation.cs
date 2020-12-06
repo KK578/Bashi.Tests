@@ -1,7 +1,7 @@
 ﻿namespace Bashi.Tests.Framework.Tests.TestObjects
 {
-    internal sealed class TestInterfaceImplementation : ITestInterface
+    internal sealed record TestInterfaceImplementation : ITestInterface
     {
-        public int Number { get; set; }
+        public int Number { get; init; }
     }
 }

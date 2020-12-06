@@ -14,8 +14,8 @@ namespace Bashi.Tests.Framework.Tests.Data
 
         private static List<T> Generate<T>(Func<T> generatorFunc)
         {
-            return Enumerable.Range(0, RepeatCount)
-                             .Select(x => generatorFunc())
+            return Enumerable.Range(0, TestDataTests.RepeatCount)
+                             .Select(_ => generatorFunc())
                              .Distinct()
                              .ToList();
         }
@@ -23,25 +23,25 @@ namespace Bashi.Tests.Framework.Tests.Data
         [Test]
         public void NextInt_WhenRepeatedCalled_WillReturnDifferentValues()
         {
-            Assert.That(Generate(() => TestData.NextInt()), Has.Count.EqualTo(RepeatCount));
+            Assert.That(TestDataTests.Generate(TestData.NextInt), Has.Count.EqualTo(TestDataTests.RepeatCount));
         }
 
         [Test]
         public void WellKnownInt_WhenRepeatedlyCalled_WillReturnTheSameValue()
         {
-            Assert.That(Generate(() => TestData.WellKnownInt), Has.Count.EqualTo(1));
+            Assert.That(TestDataTests.Generate(() => TestData.WellKnownInt), Has.Count.EqualTo(1));
         }
 
         [Test]
         public void NextString_WhenRepeatedlyCalled_WillReturnDifferentValues()
         {
-            Assert.That(Generate(() => TestData.NextString()), Has.Count.EqualTo(RepeatCount));
+            Assert.That(TestDataTests.Generate(TestData.NextString), Has.Count.EqualTo(TestDataTests.RepeatCount));
         }
 
         [Test]
         public void WellKnownString_WhenRepeatedlyCalled_WillReturnTheSameValue()
         {
-            Assert.That(Generate(() => TestData.WellKnownString), Has.Count.EqualTo(1));
+            Assert.That(TestDataTests.Generate(() => TestData.WellKnownString), Has.Count.EqualTo(1));
         }
 
         [Test]

@@ -11,7 +11,7 @@ namespace Bashi.Tests.Framework.Data
     /// </summary>
     public static class TestData
     {
-        private static readonly Fixture Fixture = new Fixture();
+        private static readonly Fixture Fixture = new();
 
         static TestData()
         {
@@ -25,7 +25,7 @@ namespace Bashi.Tests.Framework.Data
         public static int WellKnownInt { get; }
 
         /// <summary>
-        /// Gets a random, but consisten for the assembly lifetime, string value.
+        /// Gets a random, but consistent for the assembly lifetime, string value.
         /// </summary>
         public static string WellKnownString { get; }
 
@@ -50,7 +50,7 @@ namespace Bashi.Tests.Framework.Data
         /// <returns>Instance of <typeparamref name="T"/> auto populated with data.</returns>
         public static T Create<T>()
         {
-            return Fixture.Create<T>();
+            return TestData.Fixture.Create<T>();
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿namespace Bashi.Tests.Framework.Tests.TestObjects
 {
-    internal sealed class NestingTestObject
+    internal sealed record NestingTestObject
     {
-        public TestObject Object { get; set; }
+        public TestObject Object { get; init; }
     }
 }

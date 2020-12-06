@@ -2,8 +2,8 @@
 
 namespace Bashi.Tests.Framework.Tests.TestObjects
 {
-    internal sealed class TestObject
+    internal sealed record TestObject
     {
-        public List<int> Numbers { get; set; }
+        public List<int> Numbers { get; init; }
     }
 }

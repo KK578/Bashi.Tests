@@ -1,17 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>net50</TargetFramework>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <PropertyGroup>
     <Title>Bashi.Tests.Framework</Title>
-    <Description>Collection of shared components for testing Bashi.</Description>
+    <Description>Collection of shared utilities for testing.</Description>
     <Authors>Kevin Kwan</Authors>
     <Company>Bashi</Company>
     <Copyright>Copyright © 2020 Bashi</Copyright>
-    <PackageProjectUrl>https://kk578.github.io/bashi/</PackageProjectUrl>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <RepositoryUrl>https://github.com/KK578/Bashi.Tests</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
@@ -27,6 +26,7 @@
     <PackageReference Include="Bashi.Core" Version="2.1.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.3" />
     <PackageReference Include="Moq" Version="4.13.1" />
+    <PackageReference Include="System.Reactive" Version="5.0.0" />
   </ItemGroup>
 
 </Project>

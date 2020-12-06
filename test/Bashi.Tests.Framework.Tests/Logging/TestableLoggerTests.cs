@@ -40,7 +40,6 @@ namespace Bashi.Tests.Framework.Tests.Logging
                 case LogLevel.Error:
                     subject.LogError("An error occurred.");
                     break;
-                case LogLevel.None:
                 default:
                     throw new ArgumentOutOfRangeException(nameof(logLevel), logLevel, null);
             }
@@ -54,7 +53,7 @@ namespace Bashi.Tests.Framework.Tests.Logging
         public void Log_GivenFormattedMessage_ThenMessageShouldBeFormatted()
         {
             var subject = new TestableLogger();
-            var name = "Fred";
+            const string name = "Fred";
             subject.LogInformation("My name is {Name}.", name);
 
             Assert.That(subject.LogEntries[0].Message, Is.EqualTo("My name is Fred."));

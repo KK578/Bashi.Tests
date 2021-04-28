@@ -1,0 +1,32 @@
+version: 2
+updates:
+- package-ecosystem: nuget
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  reviewers:
+  - KK578
+  assignees:
+  - KK578
+  ignore:
+  - dependency-name: AutoFixture
+    versions:
+    - 4.15.0
+    - 4.16.0
+  - dependency-name: Microsoft.NET.Test.Sdk
+    versions:
+    - 16.9.1
+  - dependency-name: NUnit
+    versions:
+    - 3.13.0
+    - 3.13.1
+  - dependency-name: NunitXml.TestLogger
+    versions:
+    - 3.0.91
+  - dependency-name: coverlet.msbuild
+    versions:
+    - 3.0.2
+  - dependency-name: Moq
+    versions:
+    - 4.16.0

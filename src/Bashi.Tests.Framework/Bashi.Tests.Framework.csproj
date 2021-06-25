@@ -23,7 +23,7 @@
 
   <ItemGroup>
     <PackageReference Include="AutoFixture" Version="4.14.0" />
-    <PackageReference Include="Bashi.Core" Version="2.1.0" />
+    <PackageReference Include="Bashi.Core" Version="4.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
     <PackageReference Include="Moq" Version="4.15.2" />
     <PackageReference Include="System.Reactive" Version="5.0.0" />
